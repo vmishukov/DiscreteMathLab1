@@ -267,7 +267,7 @@ namespace WindowsFormsApp1
                 {
                     AntiReflexiveLabel.Text += " ✘";
                 }
-                if (Classes.Pairs.SymmetricCheck(Pairs))
+                if (Classes.Pairs.SymmetricCheck(Pairs,Set))
                 {
                     Symmetric.Text += " ✔";
                 }
@@ -275,7 +275,7 @@ namespace WindowsFormsApp1
                 {
                     Symmetric.Text += " ✘";
                 }
-                if (Classes.Pairs.AntiSymmetricCheck(Pairs))
+                if (Classes.Pairs.AntiSymmetricCheck(Pairs,Set))
                 {
                     AntiSymmetric.Text += " ✔";
                 }

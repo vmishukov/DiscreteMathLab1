@@ -106,11 +106,14 @@ namespace WindowsFormsApp1.Classes
 
             return true;
         }
-        public static bool SymmetricCheck(List<Pairs> Pairs)
+        public static bool SymmetricCheck(List<Pairs> Pairs, List<int> Set)
         {
+           
 
             foreach (var pair in Pairs)
             {
+                
+                
                 if (!Classes.Pairs.Contains(Pairs, new Pairs(pair.b, pair.a)))
                 {
                     return false;
@@ -121,12 +124,13 @@ namespace WindowsFormsApp1.Classes
 
             return true;
         }
-        public static bool AntiSymmetricCheck(List<Pairs> Pairs)
+        public static bool AntiSymmetricCheck(List<Pairs> Pairs, List<int> Set)
         {
+            
 
             foreach (var pair in Pairs)
             {
-                if (Classes.Pairs.Contains(Pairs, new Pairs(pair.b, pair.a)))
+                if (Classes.Pairs.Contains(Pairs, new Pairs(pair.b, pair.a)) && (pair.b != pair.a))
                 {
                     return false;
                 }
